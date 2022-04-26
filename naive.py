@@ -31,7 +31,7 @@ with jsonlines.open(corupus_path) as reader:
             idiom_end = instance["offsets"][-1][1] - 1
             context_list = instance["context"]
             # This can be made a lot faster with a Trie
-            # Or Aho-Corasick if you really wanna have some fun
+            # Or Aho-Corasick would be even better
             # But this is reasonably fast for now
             for context in context_list:
                 context = context.lower()
